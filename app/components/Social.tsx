@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from "framer-motion";
-import MagneticWrapper from "./MagneticWrapper";
 import Link from "next/link";
 import { FaTiktok , FaInstagram, FaYoutube,  } from "react-icons/fa6";
 

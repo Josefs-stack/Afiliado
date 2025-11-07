@@ -9,11 +9,11 @@ import Social from "./Social";
 
 export default function Header() {
     return (
-        <div className="w-full h-40 py-5 absolute flex justify-around items-center top-5 z-50">
-          
+        <div className="w-full min-h-72 py-5 flex justify-around items-center top-5 z-50">
+
           <BackgroundMusic />
 
-          <div className="w-1/3 h-full flex flex-col justify-center items-center">
+          <div className="w- h-full flex flex-col justify-center items-center">
             <MagneticWrapper>
               <motion.div
                 initial={{ opacity: 0 }}
