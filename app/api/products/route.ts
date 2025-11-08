@@ -6,7 +6,7 @@ import { products } from "@/data/products";
 export async function GET() {
   const result = [];
 
-  for (const { url, affiliate, image } of products) {
+  for (const { url, affiliate, category, image } of products) {
     try {
       const { data } = await axios.get(url, {
         headers: {
@@ -19,7 +19,6 @@ export async function GET() {
 
       const title = $("h1.ui-pdp-title").text().trim();
       const price = $("span.andes-money-amount__fraction").first().text().trim();
-      const category = $("a.ui-pdp-breadcrumb__link").last().text().trim();
 
       result.push({
         title,

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import MagneticWrapper from "./MagneticWrapper";
+import { motion } from "framer-motion";
 
 type Product = {
   title: string;
@@ -31,15 +32,20 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="p-8 min-h-screen max-w-6xl mx-auto">
-      <h1 className="text-3xl text-center font-bold mb-8">Produtos do Mercado Livre</h1>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 2.2 }}
+      className="p-8 mx-auto"
+    >
+      <h1 className="text-3xl text-center font-bold mb-8">Lista de Produtos</h1>
 
       {Object.keys(data).length === 0 ? (
         <p>Carregando produtos...</p>
       ) : (
         Object.entries(data).map(([category, products]) => (
-          <div key={category} className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 border-b pb-2">
+          <div key={category} className="mb-20">
+            <h2 className="text-2xl text-neutral-50 text-center uppercase font-bold mb-10 border rounded-xl bg-neutral-950">
               {category}
             </h2>
             <div className="flex flex-wrap gap-6">
@@ -69,6 +75,6 @@ export default function HomePage() {
           </div>
         ))
       )}
-    </div>
+    </motion.div>
   );
 }
