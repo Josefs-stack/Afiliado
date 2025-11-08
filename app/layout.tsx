@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { MagnetiProvider } from "./context/MagnetiContext";
-import MagneticWrapper from "./components/MagneticWrapper";
-import BackgroundMusic from "./components/BackgroundMusic";
 
 export const metadata: Metadata = {
   title: "BAKA",
@@ -14,7 +12,7 @@ export const metadata: Metadata = {
     siteName: "BAKA",
     images: [
       {
-        url: "https://seusite.com/imagem.jpg",
+        url: "/baka.jpg",
         width: 800,
         height: 600,
         alt: "J0S3f 2K24",
